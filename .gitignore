@@ -78,7 +78,7 @@ instance/
 .env.*
 
 # Local JSON mock data or persistence files
-app/data/*.json
+# app/data/*.json
 !app/data/.gitkeep
 
 # Generated OpenAPI docs or schema
