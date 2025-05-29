@@ -1,0 +1,26 @@
+[
+  {
+    "destination_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Paris",
+    "location": "France",
+    "description": "The City of Light featuring iconic landmarks like the Eiffel Tower and world-class cuisine.",
+    "price_range": "moderate",
+    "availability": true
+  },
+  {
+    "destination_id": "4fa85f64-5717-4562-b3fc-2c963f66afa7",
+    "name": "Tokyo",
+    "location": "Japan",
+    "description": "A vibrant metropolis blending ultramodern technology with traditional culture.",
+    "price_range": "luxury",
+    "availability": true
+  },
+  {
+    "destination_id": "5fa85f64-5717-4562-b3fc-2c963f66afa8",
+    "name": "Bali",
+    "location": "Indonesia",
+    "description": "A tropical paradise known for its beaches, temples, and vibrant culture.",
+    "price_range": "budget",
+    "availability": true
+  }
+]
