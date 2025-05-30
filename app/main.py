@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import routers (to be created)
-from app.routes import customers, destinations
+from app.routes import customers, destinations, bookings
 
 app = FastAPI(
     title="Travel Service Backend",
@@ -22,6 +22,7 @@ app.add_middleware(
 # Include routers
 app.include_router(customers.router, prefix="/api/v1")
 app.include_router(destinations.router)
+app.include_router(bookings.router)
 
 @app.get("/")
 async def root():
