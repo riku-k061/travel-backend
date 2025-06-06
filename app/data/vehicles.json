@@ -1,0 +1,37 @@
+[
+  {
+    "id": "veh-001",
+    "type": "bus",
+    "capacity": 50,
+    "available": true,
+    "destination_ids": ["3fa85f64-5717-4562-b3fc-2c963f66afa6", "4fa85f64-5717-4562-b3fc-2c963f66afa7", "5fa85f64-5717-4562-b3fc-2c963f66afa8"]
+  },
+  {
+    "id": "veh-002",
+    "type": "van",
+    "capacity": 15,
+    "available": true,
+    "destination_ids": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"]
+  },
+  {
+    "id": "veh-003",
+    "type": "sedan",
+    "capacity": 4,
+    "available": false,
+    "destination_ids": ["4fa85f64-5717-4562-b3fc-2c963f66afa7"]
+  },
+  {
+    "id": "veh-004",
+    "type": "bus",
+    "capacity": 45,
+    "available": true,
+    "destination_ids": ["5fa85f64-5717-4562-b3fc-2c963f66afa8"]
+  },
+  {
+    "id": "veh-005",
+    "type": "minivan",
+    "capacity": 7,
+    "available": true,
+    "destination_ids": ["3fa85f64-5717-4562-b3fc-2c963f66afa6", "4fa85f64-5717-4562-b3fc-2c963f66afa7"]
+  }
+]
