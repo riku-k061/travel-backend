@@ -1,0 +1,42 @@
+[
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "name": "John Smith",
+    "role": "Senior Guide",
+    "contact_email": "john.smith@travelservice.com",
+    "available": true,
+    "destination_ids": ["3fa85f64-5717-4562-b3fc-2c963f66afa6", "5fa85f64-5717-4562-b3fc-2c963f66afa8"]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Maria Rodriguez",
+    "role": "Tour Guide",
+    "contact_email": "maria.r@travelservice.com",
+    "available": true,
+    "destination_ids": ["4fa85f64-5717-4562-b3fc-2c963f66afa"]
+  },
+  {
+    "id": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+    "name": "Raj Patel",
+    "role": "Administrative Staff",
+    "contact_email": "raj.patel@travelservice.com",
+    "available": true,
+    "destination_ids": null
+  },
+  {
+    "id": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+    "name": "Emma Johnson",
+    "role": "Support Staff",
+    "contact_email": "emma.j@travelservice.com",
+    "available": false,
+    "destination_ids": null
+  },
+  {
+    "id": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+    "name": "Alex Chen",
+    "role": "Specialty Guide",
+    "contact_email": "alex.chen@travelservice.com",
+    "available": true,
+    "destination_ids": ["5fa85f64-5717-4562-b3fc-2c963f66afa8"]
+  }
+]
