@@ -65,6 +65,46 @@ def create_booking(booking: BookingCreate = Body(...)):
     
     return new_booking
 
+@router.get("/stats", response_model=BookingStats)
+def get_booking_stats():
+    """
+    Get statistical information about bookings:
+    - Total number of bookings
+    - Number of bookings per status
+    - Average duration in days
+    """
+    bookings = get_bookings_data()
+    
+    # Calculate total bookings
+    total_bookings = len(bookings)
+    print(total_bookings)
+    
+    # Count bookings by status
+    status_counter = Counter(booking.get("status", "pending") for booking in bookings)
+    bookings_by_status = dict(status_counter)
+    
+    # Calculate average duration
+    durations = []
+    for booking in bookings:
+        try:
+            start_date = datetime.fromisoformat(booking.get("start_date")).date()
+            end_date = datetime.fromisoformat(booking.get("end_date")).date()
+            duration = (end_date - start_date).days
+            if duration >= 0:  # Ensure we only count valid durations
+                durations.append(duration)
+        except (ValueError, TypeError):
+            # Skip invalid date formats
+            continue
+    
+    # Calculate average duration (default to 0 if no valid durations)
+    average_duration = mean(durations) if durations else 0.0
+    
+    return {
+        "total_bookings": total_bookings,
+        "bookings_by_status": bookings_by_status,
+        "average_duration_days": average_duration
+    }
+
 @router.get("/", response_model=List[Booking])
 def read_bookings():
     return get_bookings_data()
@@ -234,43 +274,3 @@ def get_booking_summary(booking_id: str):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error retrieving booking summary: {str(e)}"
         )
-    
-@router.get("/stats", response_model=BookingStats)
-def get_booking_stats():
-    """
-    Get statistical information about bookings:
-    - Total number of bookings
-    - Number of bookings per status
-    - Average duration in days
-    """
-    bookings = get_bookings_data()
-    
-    # Calculate total bookings
-    total_bookings = len(bookings)
-    print(total_bookings)
-    
-    # Count bookings by status
-    status_counter = Counter(booking.get("status", "pending") for booking in bookings)
-    bookings_by_status = dict(status_counter)
-    
-    # Calculate average duration
-    durations = []
-    for booking in bookings:
-        try:
-            start_date = datetime.fromisoformat(booking.get("start_date")).date()
-            end_date = datetime.fromisoformat(booking.get("end_date")).date()
-            duration = (end_date - start_date).days
-            if duration >= 0:  # Ensure we only count valid durations
-                durations.append(duration)
-        except (ValueError, TypeError):
-            # Skip invalid date formats
-            continue
-    
-    # Calculate average duration (default to 0 if no valid durations)
-    average_duration = mean(durations) if durations else 0.0
-    
-    return {
-        "total_bookings": total_bookings,
-        "bookings_by_status": bookings_by_status,
-        "average_duration_days": average_duration
-    }

@@ -1,3 +1,4 @@
+# app/models/booking.py
 from pydantic import BaseModel, validator, Field
 from datetime import date, datetime
 from typing import Optional, Dict
