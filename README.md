@@ -94,9 +94,9 @@ uvicorn app.main:app --reload
 | 3 | Booking     | ✅ Completed | Relational validation, cancellation logic                      |
 | 4 | Schedule    | ✅ Completed | Time conflict prevention, availability toggling                |
 | 5 | Payment     | ✅ Completed | Refund validation, payment method checking                     |
-| 6 | Feedback    | ✅ Completed | Soft-delete, admin notes, status filtering                     |
+| 6 | Vehicle     | ✅ Completed | Bulk insert, soft/reactivation, filter by type and destination |
 | 7 | Staff       | ✅ Completed | Role/destination validation, reactivation, summary stats       |
-| 8 | Vehicle     | ✅ Completed | Bulk insert, soft/reactivation, filter by type and destination |
+| 8 | Feedback    | ✅ Completed | Soft-delete, admin notes, status filtering                     |
 
 ---
 
