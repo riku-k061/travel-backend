@@ -57,6 +57,7 @@ travel_service_backend/
 │   └── test_data/            # Test fixture data
 │
 ├── requirements.txt          # Project dependencies
+├── run_tests.py           # Run all of tests
 └── README.md
 ```
 
@@ -102,6 +103,7 @@ uvicorn app.main:app --reload
 
 ## 🧪 Unit Test Results
 ⚙️ How to Run
+Run all of tests using [run_tests.py](https://github.com/riku-k061/travel-backend/blob/main/run_tests.py) 
 
 ```bash
 python run_tests.py 
