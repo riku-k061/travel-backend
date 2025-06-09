@@ -101,9 +101,11 @@ uvicorn app.main:app --reload
 ---
 
 ## 🧪 Unit Test Results
+⚙️ How to Run
 
-* Isolated JSON data using `tmp_path` and monkeypatching
-* Used `TestClient` from FastAPI to simulate real HTTP calls
+```bash
+python run_tests.py 
+```
 
 📸 Screenshots:
 
